@@ -40,7 +40,7 @@ public class UserServiceImpl implements UserService {
 
 	@Override
 	@Transactional
-	public User findUserById(User user) {
+	public String findUserById(Integer user) {
 		return userDao.findUserById(user);
 	}
 
@@ -48,5 +48,11 @@ public class UserServiceImpl implements UserService {
 	@Transactional
 	public void deleteUser(Integer userId) {
 		userDao.deleteUser(userId);
+	}
+
+	@Override
+	@Transactional
+	public String findIdByEmail(User user) {
+		return userDao.findIdByEmail(user);
 	}
 }

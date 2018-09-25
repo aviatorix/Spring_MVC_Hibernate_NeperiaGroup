@@ -12,7 +12,10 @@ public interface UserDao {
 
 	public User updateUser(User user);
 
-	public User findUserById(User user);
+	public String findUserById(Integer userId);
 
 	public void deleteUser(Integer userId);
+
+	public String findIdByEmail(User user);
+	
 }
